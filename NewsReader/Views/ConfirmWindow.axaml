@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:NewsReader.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:NewsReader.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="NewsReader.Views.ConfirmWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Delete Feed">
+    <StackPanel>
+        <Label />
+        <DockPanel>
+            <Button DockPanel.Dock="Left" Background="Red" Content="Yes" Click="Yes_OnClick"/>
+            <Button DockPanel.Dock="Right" Content="Cancel" Click="Cancel_OnClick"/>
+        </DockPanel>
+    </StackPanel>
+</Window>

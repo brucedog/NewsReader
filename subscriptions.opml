@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Bryce subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="News" title="News">
+            <outline type="rss" text="Hacker News" title="Hacker News"
+                xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/" />            
+            <outline type="rss" text="MarketWatch.com - Personal Finance"
+                title="MarketWatch.com - Personal Finance"
+                xmlUrl="http://www.marketwatch.com/rss/Subchannels/?scname=Personal+Finance&amp;sc=2048"
+                htmlUrl="http://www.marketwatch.com/?dist=rss" />
+            <outline type="rss" text="NYT &gt; Home Page" title="NYT &gt; Home Page"
+                xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+                htmlUrl="https://nytimes.com" />
+        </outline>                        
+        <outline type="rss" text="Lifehacker" title="Lifehacker"
+            xmlUrl="http://lifehacker.com/index.xml" htmlUrl="https://lifehacker.com" />  
+        <outline type="rss" text="Fedora" title="Fedora"
+            xmlUrl="http://feeds.feedburner.com/gofedora" htmlUrl="https://gofedora.com" />
+        <outline type="rss" text="JetBrains News" title="JetBrains News"
+            xmlUrl="http://www.jetbrains.com/rss.xml"
+            htmlUrl="http://www.jetbrains.com/allnews.html" />
+        <outline type="rss" text="Hack a Day" title="Hack a Day"
+            xmlUrl="http://www.hackaday.com/rss.xml" htmlUrl="https://hackaday.com" />
+    </body>
+</opml>
