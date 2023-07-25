@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET 7
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
     - name: Install dependencies
@@ -22,5 +22,5 @@ jobs:
 #      run: dotnet test --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage" /p:CoverletOutputFormat=opencover --filter FullyQualifiedName!~.UnitTests
 #    - name: UploadCoverage
 #      run: bash <(curl -s https://codecov.io/bash)
-      if: runner.os == 'Linux'
+#      if: runner.os == 'Linux'
 
