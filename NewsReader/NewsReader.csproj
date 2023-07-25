@@ -40,7 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NewsReader.DataStorage\Interfaces\NewsReader.DataStorage.Interfaces.csproj" />
+    <ProjectReference Include="..\NewsReader.DataStorage\SqlLite\NewsReader.DataStorage.SqlLite.csproj" />
     <ProjectReference Include="..\NewsReader.Interfaces\NewsReader.Interfaces.csproj" />
+    <ProjectReference Include="..\NewsReader.Models\NewsReader.Models.csproj" />
     <ProjectReference Include="..\OPML\OPML.csproj" />
   </ItemGroup>
 
