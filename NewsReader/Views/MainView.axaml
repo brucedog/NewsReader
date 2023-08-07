@@ -28,20 +28,24 @@
 							<ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock 
+                        <Label 
+                            x:Name="descriptionUI"
+                             IsVisible="False"
+                            Content="{Binding Description}"/>
+                        <TextBlock Grid.Column="0"
                             x:Name="feed"
                             TextWrapping="Wrap"
-                            FontSize="16" Text="{Binding }" />
+                            FontSize="16" Text="{Binding Title}" />
                         <Button Grid.Column="1"
                                 Margin="1"
-                                Content="Play"
+                                Content="Book"
                                 Command="{Binding ElementName=uifeeds,  Path=DataContext.OnDeleteClicked}"
-                                CommandParameter="{Binding ElementName=feed, Path=Text}"/>
+                                CommandParameter="{Binding ElementName=feed, Path= Text}"/>
                         <Button Grid.Column="2"
                                 Margin="1"
-                                Content="pause"
-                                Command="{Binding ElementName=uifeeds,  Path=DataContext.OnDeleteClicked}"
-                                CommandParameter="{Binding ElementName=feed, Path=Text}"/>
+                                Content="Play"
+                                Command="{Binding ElementName=uifeeds,  Path=DataContext.OnPlayContent}"
+                                CommandParameter="{Binding ElementName=descriptionUI, Path=Content}"/>
                         <Button Grid.Column="3"
                                 Margin="1"
                             Background="Red" Content="Del" 
