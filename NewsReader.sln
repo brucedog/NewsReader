@@ -29,6 +29,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsReader.DataStorage.Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsReader.DataStorage.SqlLite", "NewsReader.DataStorage\SqlLite\NewsReader.DataStorage.SqlLite.csproj", "{A44D8530-EE2E-4072-96D4-AF1E316AD406}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0DE419D5-99CC-4D9F-B3D3-9668F54B158B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader.Services.Abstractions", "NewsReader.Services\NewsReader.Services.Abstractions\NewsReader.Services.Abstractions.csproj", "{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader.Services.Implementation", "NewsReader.Services\NewsReader.Services.Implementation\NewsReader.Services.Implementation.csproj", "{493AF9B8-9A85-46AE-947A-30C65E7A26A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +49,7 @@ Global
 		{64C38966-F2FF-4F4E-B098-6B01A373A496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64C38966-F2FF-4F4E-B098-6B01A373A496}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{64C38966-F2FF-4F4E-B098-6B01A373A496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C38966-F2FF-4F4E-B098-6B01A373A496}.Release|Any CPU.Build.0 = Release|Any CPU
 		{519ECDFD-2962-4304-9266-3436B6771220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{519ECDFD-2962-4304-9266-3436B6771220}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{519ECDFD-2962-4304-9266-3436B6771220}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -79,6 +86,14 @@ Global
 		{A44D8530-EE2E-4072-96D4-AF1E316AD406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A44D8530-EE2E-4072-96D4-AF1E316AD406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A44D8530-EE2E-4072-96D4-AF1E316AD406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +102,8 @@ Global
 		{1345DE66-1340-4CD8-BD5C-EA12267BE7BB} = {541D6EC4-3C84-46EE-AD16-1F6C8D7E1CB2}
 		{BF8C70A4-6468-419B-BE17-DB9F66A685BA} = {C8AF9A02-3625-4538-9D8C-1F739CB277D3}
 		{A44D8530-EE2E-4072-96D4-AF1E316AD406} = {C8AF9A02-3625-4538-9D8C-1F739CB277D3}
+		{F6856C95-4E51-41BD-BFC8-4FD50BCD387E} = {0DE419D5-99CC-4D9F-B3D3-9668F54B158B}
+		{493AF9B8-9A85-46AE-947A-30C65E7A26A2} = {0DE419D5-99CC-4D9F-B3D3-9668F54B158B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61B1C3EC-FCCF-4E75-B727-60E14BCE0127}

@@ -8,5 +8,17 @@
         x:Class="NewsReader.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="NewsReader">
+    <Panel>
+		<!-- <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+		-->
         <views:MainView />
+	</Panel>
 </Window>

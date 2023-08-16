@@ -1,9 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
@@ -15,6 +12,7 @@ using NewsReader.Models;
 using NewsReader.ViewModels;
 using NewsReader.Views;
 using Splat;
+
 namespace NewsReader;
 
 public partial class App : Application
@@ -103,8 +101,8 @@ public partial class App : Application
 
         var contect = Path.Combine(dbDirectory, "TestingDb");
         var config = new DatabaseConfiguration { ConnectionString = $"FileName={contect};Connection=Shared" };
-
-        services.RegisterLazySingleton<IUnitOfWorkFactory>(() => new LiteDbUnitOfWorkFactory(config));
+        
         //services
+        services.RegisterLazySingleton<IUnitOfWorkFactory>(() => new LiteDbUnitOfWorkFactory(config));
     }
 }

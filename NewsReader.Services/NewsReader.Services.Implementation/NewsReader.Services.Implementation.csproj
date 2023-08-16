@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Splat" Version="14.4.1" />
+    <PackageReference Include="System.Speech" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\NewsReader.Interfaces\NewsReader.Interfaces.csproj" />
+    <ProjectReference Include="..\..\NewsReader\NewsReader.csproj" />
+    <ProjectReference Include="..\NewsReader.Services.Abstractions\NewsReader.Services.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

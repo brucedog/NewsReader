@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:NewsReader.ViewModels"
+        mc:Ignorable="d" 
+        Icon="/Assets/avalonia-logo.ico"
+        x:Class="NewsReader.Views.DeleteConfirmationWindow"
+        Title="Delete Feed"
+        Height="150"
+        Width="250"
+        x:DataType="viewModels:DeleteConfirmationWindowModel">
+	<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Delete Article?" Margin="5"/>
+		<Label Grid.Row="1" Margin="5" Content="{Binding Feed}" />
+        <StackPanel  Grid.Row="2" Orientation="Horizontal" Margin="5">
+            <Button Margin="5" Content="Yes" Background="Red" Command="{Binding Delete}" CommandParameter="true"/>
+            <Button Margin="5" Content="Cancel" Command="{Binding Path=Delete}" CommandParameter="false"/>
+        </StackPanel>
+    </Grid>
+</Window>

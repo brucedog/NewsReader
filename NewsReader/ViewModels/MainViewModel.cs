@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Collections;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using CodeHollow.FeedReader;
 using NewsReader.DataStorage.Interfaces.Configuration;
@@ -43,18 +45,17 @@ public class MainViewModel : ViewModelBase
         ;
     }
 
-    public async void OnDeleteClicked(object feed)  
+    public async Task OnDeleteClicked(object feed)  
     {
         try
         {
-            // todo deleting with a dialog
-            //var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime;
-            //var window = new ConfirmWindow();
-            //window.CloseRequested += (s, e) =>
-            //{
-            //    ;
-            //};
-            //window.ShowDialog(lifetime.MainWindow);
+            var deleteWindow = new DeleteConfirmationWindow
+            {
+                DataContext = new DeleteConfirmationWindowModel(feed)
+            };
+            var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime;
+
+            deleteWindow.ShowDialog(lifetime.MainWindow);
         }
         catch (Exception exception)
         {
