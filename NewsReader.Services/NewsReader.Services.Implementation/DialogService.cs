@@ -2,8 +2,10 @@
 using NewsReader.Interfaces;
 using System.Reflection;
 using Avalonia;
+using NewReader.ViewModels.Services.Dialog;
 using NewsReader.ViewModels;
 using NewsReader.Views;
+using NewsReader.Views.Dialogs;
 using Splat;
 
 namespace NewsReader.Services.Implementation;
@@ -114,9 +116,9 @@ public class DialogService : IDialogService
     {
         var mainWindow = (MainWindow)_mainWindowProvider.GetMainWindow();
 
-        mainWindow.ShowOverlay();
+        //mainWindow.ShowOverlay();
         var result = await window.ShowDialog<TResult>(mainWindow);
-        mainWindow.HideOverlay();
+        //mainWindow.HideOverlay();
         if (window is IDisposable disposable)
         {
             disposable.Dispose();

@@ -3,13 +3,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:NewsReader.ViewModels"
+        xmlns:viewModels1="clr-namespace:NewsReader.ViewModels;assembly=NewReader.ViewModels"
         mc:Ignorable="d" 
         Icon="/Assets/avalonia-logo.ico"
         x:Class="NewsReader.Views.DeleteConfirmationWindow"
         Title="Delete Feed"
         Height="150"
         Width="250"
-        x:DataType="viewModels:DeleteConfirmationWindowModel">
+        x:DataType="viewModels1:DeleteConfirmationWindowModel">
 	<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>

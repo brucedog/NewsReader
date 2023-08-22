@@ -31,9 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsReader.DataStorage.SqlL
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0DE419D5-99CC-4D9F-B3D3-9668F54B158B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader.Services.Abstractions", "NewsReader.Services\NewsReader.Services.Abstractions\NewsReader.Services.Abstractions.csproj", "{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsReader.Services.Abstractions", "NewsReader.Services\NewsReader.Services.Abstractions\NewsReader.Services.Abstractions.csproj", "{F6856C95-4E51-41BD-BFC8-4FD50BCD387E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader.Services.Implementation", "NewsReader.Services\NewsReader.Services.Implementation\NewsReader.Services.Implementation.csproj", "{493AF9B8-9A85-46AE-947A-30C65E7A26A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsReader.Services.Implementation", "NewsReader.Services\NewsReader.Services.Implementation\NewsReader.Services.Implementation.csproj", "{493AF9B8-9A85-46AE-947A-30C65E7A26A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewReader.ViewModels", "NewReader.ViewModels\NewReader.ViewModels.csproj", "{44663AF1-63F8-48BD-B425-612EF79DA50C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader.Utilities", "NewsReader.Utilities\NewsReader.Utilities.csproj", "{4C19B81D-0674-405E-8BAC-FB23A3721C4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +98,14 @@ Global
 		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{493AF9B8-9A85-46AE-947A-30C65E7A26A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44663AF1-63F8-48BD-B425-612EF79DA50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44663AF1-63F8-48BD-B425-612EF79DA50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44663AF1-63F8-48BD-B425-612EF79DA50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44663AF1-63F8-48BD-B425-612EF79DA50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C19B81D-0674-405E-8BAC-FB23A3721C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C19B81D-0674-405E-8BAC-FB23A3721C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C19B81D-0674-405E-8BAC-FB23A3721C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C19B81D-0674-405E-8BAC-FB23A3721C4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

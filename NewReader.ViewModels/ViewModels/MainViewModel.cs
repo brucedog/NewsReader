@@ -2,21 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reactive.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Collections;
-using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using CodeHollow.FeedReader;
-using NewsReader.DataStorage.Interfaces.Configuration;
 using NewsReader.DataStorage.Interfaces.UnitOfWork;
-using NewsReader.DataStorage.SqlLite;
 using NewsReader.Interfaces;
 using NewsReader.Model;
 using NewsReader.Models;
-using NewsReader.Views;
 using OPML;
 using ReactiveUI;
 
@@ -49,13 +43,13 @@ public class MainViewModel : ViewModelBase
     {
         try
         {
-            var deleteWindow = new DeleteConfirmationWindow
-            {
-                DataContext = new DeleteConfirmationWindowModel(feed)
-            };
-            var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime;
+            //var deleteWindow = new DeleteConfirmationWindow
+            //{
+            //    DataContext = new DeleteConfirmationWindowModel(feed)
+            //};
+            //var lifetime = (IClassicDesktopStyleApplicationLifetime)Application.Current.ApplicationLifetime;
 
-            deleteWindow.ShowDialog(lifetime.MainWindow);
+            //deleteWindow.ShowDialog(lifetime.MainWindow);
         }
         catch (Exception exception)
         {

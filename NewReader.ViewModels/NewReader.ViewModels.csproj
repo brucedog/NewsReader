@@ -5,29 +5,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  
-  <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <AvaloniaResource Remove="Assets\subscriptions.opml" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <None Remove="Assets\settings.jpg" />
-    <None Remove="Assets\subscriptions.opml" />
-  </ItemGroup>
-
-  
-  <ItemGroup>
-    <Content Include="Assets\subscriptions.opml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
@@ -40,15 +17,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NewReader.ViewModels\NewReader.ViewModels.csproj" />
     <ProjectReference Include="..\NewsReader.DataStorage\Interfaces\NewsReader.DataStorage.Interfaces.csproj" />
-    <ProjectReference Include="..\NewsReader.DataStorage\SqlLite\NewsReader.DataStorage.SqlLite.csproj" />
     <ProjectReference Include="..\NewsReader.Interfaces\NewsReader.Interfaces.csproj" />
     <ProjectReference Include="..\NewsReader.Models\NewsReader.Models.csproj" />
+    <ProjectReference Include="..\NewsReader.Utilities\NewsReader.Utilities.csproj" />
     <ProjectReference Include="..\OPML\OPML.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Dialogs\" />
+    <Folder Include="Services\Dialog\" />
   </ItemGroup>
 </Project>
