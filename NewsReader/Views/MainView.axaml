@@ -40,13 +40,13 @@
                         <Button Grid.Column="1"
                                 Margin="1"
                                 Content="Book"
-                                Command="{Binding ElementName=uifeeds,  Path=DataContext.OnDeleteClicked}"
+                                Command="{Binding ElementName=uifeeds,  Path=DataContext.OnBookMarkedClicked}"
                                 CommandParameter="{Binding ElementName=feed, Path= Text}"/>
                         <Button Grid.Column="2"
                                 Margin="1"
                                 Content="Play"
                                 Command="{Binding ElementName=uifeeds,  Path=DataContext.OnPlayContent}"
-                                CommandParameter="{Binding ElementName=descriptionUI, Path=Content}"/>
+                                CommandParameter="{Binding ElementName=feed, Path=Text}"/>
                         <Button Grid.Column="3"
                                 Margin="1"
                             Background="Red" Content="Del" 

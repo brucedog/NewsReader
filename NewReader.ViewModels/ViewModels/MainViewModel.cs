@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Collections;
@@ -34,15 +35,59 @@ public class MainViewModel : ViewModelBase
         //todo
     }
 
+    public void OnBookMarkedClicked(object content)
+    {
+        try
+        {
+            string item2remove = (string)content;
+            var article = _feeds.FirstOrDefault(f => f.Title == item2remove);
+            if (article != null)
+            {
+                var uow = _unitOfWorkFactory.Create();
+                var repo = uow.GetRepository<Article>();
+                Article updatedArticle = new Article
+                {
+                    IsBookMarkedForLater = true
+                };
+                repo.Update(updatedArticle.Id, updatedArticle);
+            }
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+    }
+
     public void OnPlayContent(object content)
     {
-        ;
+        try
+        {
+            string item2remove = (string)content;
+            var article = _feeds.FirstOrDefault(f => f.Title == item2remove);
+            if (article != null)
+            {
+                HttpClient client = new HttpClient();
+                var data = client.GetStringAsync(article.Link);
+                var result = data.Result;
+            }
+
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
     }
 
     public async Task OnDeleteClicked(object feed)  
     {
         try
         {
+            string item2remove = (string)feed;
+            var id = _feeds.FirstOrDefault(f => f.Title == item2remove);
+            if (id != null)
+            {
+                Feeds.Remove(id);
+            }
             //var deleteWindow = new DeleteConfirmationWindow
             //{
             //    DataContext = new DeleteConfirmationWindowModel(feed)
