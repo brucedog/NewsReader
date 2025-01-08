@@ -10,8 +10,11 @@ namespace OPML.UnitTests
             string file2load = Path.Combine(Directory.GetCurrentDirectory(), "subscriptions.opml");
             
             IOPML opml = new OpmlDataProvider();
-            
-            Assert.NotNull(opml.LoadOpml(file2load));
+            var loadedOpml = opml.LoadOpml(file2load);
+
+            Assert.NotNull(loadedOpml);
+            Assert.NotNull(loadedOpml.Body);
+            Assert.True(loadedOpml.Body.Outlines.Count > 0);
         }
     }
 }

@@ -125,6 +125,10 @@ public class MainViewModel : ViewModelBase
             IOPML opml = new OpmlDataProvider();
             var data = opml.LoadOpml(file2load);
 
+            // failed to load subscriptions file
+            if (data == null)
+                return;
+
             foreach (var outline in data.Body.Outlines)
             {
                 if (!string.IsNullOrWhiteSpace(outline.XMLUrl))

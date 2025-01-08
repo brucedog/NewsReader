@@ -11,7 +11,7 @@ namespace NewsReader.Models
         public string Description { get; set; }
         public string Content { get; set; }
         public string Link { get; set; }
-        public List<string> Categories { get; set; }
+        public List<string> Categories { get; set; } = new List<string>();
         public DateTime PublishedOn { get; set; }
         public bool IsRead { get; set; }
         public bool IsBookMarkedForLater { get; set; }
